@@ -23,6 +23,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "allowedCommonJsDependencies":[
+              "zrender/lib/svg/svg",
+              "zrender/lib/vml/vml",
+              "echarts",
+              "electron"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

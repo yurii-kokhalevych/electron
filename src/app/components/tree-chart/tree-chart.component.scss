@@ -1,0 +1,82 @@
+.row-item {
+  display: flex;
+  .bi {
+    cursor: pointer;
+  }
+}
+
+.rows {
+  display: flex;
+  margin: 15px 10px;
+}
+
+.column {
+  width: calc(50% - 5px);
+  flex-shrink: 0;
+  margin-right: 5px;
+  border: 1px solid #eca571;
+  background-color: #fcf9f4;
+  border-radius: 5px;
+  height: 480px;
+  &.filter {
+    padding: 10px;
+  }
+}
+
+.toggle-container {
+  display: flex;
+  width: 100%;
+  .radio-label {
+    width: calc(100%/3);
+    flex-shrink: 0;
+    background-color: #019c9e;
+    color: #fcf9f4;
+    border-color: #fcf9f4;
+    box-shadow: unset;
+    &:hover {
+      background-color: #019c9e;
+      color: #fcf9f4;
+      opacity: 0.8;
+    }
+    &.active {
+      background-color: #006d68;
+      &:hover {
+        background-color: #006d68;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.max-height {
+  height: 480px;
+  overflow-y: auto;
+  padding: 0;
+  border: 1px solid #eca571;
+  background-color: #fcf9f4;
+  border-radius: 5px;
+}
+
+.row-item {
+  .form-check {
+    width: calc(100% - 24px) !important;
+    position: relative;
+    justify-content: unset;
+    &.no-children {
+      width: calc(100% - 7px) !important;
+    }
+  }
+}
+
+.d-inline-block {
+  width: calc(100% - 10px);
+}
+
+.item-value {
+  position: absolute;
+  right: 0;
+}
+
+.icon-svg {
+  margin: 0 5px
+}
