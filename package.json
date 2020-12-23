@@ -1,10 +1,13 @@
 {
   "name": "electron-app",
   "main": "dist/main.js",
+  "author": "Yurii",
+  "description": "electron-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "forge-start": "electron-forge start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,7 +15,9 @@
     "build:electron": "ng build --prod --base-href ./ && tsc electron/main.ts electron/preload.ts --outDir dist",
     "start:electron": "electron .",
     "dev-server": "cd electron && tsc-watch --onSuccess \"electron ../dist/main.js \"",
-    "dev": "concurrently \"yarn dev-server\" \"yarn start\""
+    "dev": "concurrently \"yarn dev-server\" \"yarn start\"",
+    "make": "electron-forge make",
+    "package": "electron-forge package"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +38,7 @@
     "angular-uploads": "^1.0.5",
     "bootstrap": "^4.5.0",
     "concurrently": "^5.3.0",
+    "electron-compile": "^6.4.4",
     "ngx-treeview": "^10.0.2",
     "ngx-ui-loader": "^10.0.0",
     "rxjs": "~6.6.0",
@@ -48,7 +54,7 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^6.0.0",
-    "electron": "^10.1.5",
+    "electron-prebuilt-compile": "10.1.5",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -65,5 +71,8 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "config": {
+    "forge": "forge.config.js"
   }
 }
